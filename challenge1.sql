@@ -1,3 +1,3 @@
-SELECT * FROM movies WHERE year > 2000
+SELECT * FROM movies WHERE year > 2000;
 
-SELECT * from actors WHERE last_name ilike '%s'
+SELECT * from actors WHERE last_name ilike '%s' LIMIT 10;
