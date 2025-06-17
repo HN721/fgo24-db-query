@@ -9,4 +9,11 @@ FROM
 WHERE
     rankscore is NOT NULL
 ORDER BY m.name ASC
-LIMIT 50
+LIMIT 50;
+
+SELECT a.first_name as Nama_Actor, r.role, m.name as title
+FROM
+    actors a
+    JOIN roles r ON r.actor_id = actor_id
+    JOIN movies m ON m.id = r.movie_id
+LIMIT 5;
