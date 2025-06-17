@@ -7,4 +7,4 @@ FROM movies
 WHERE
     rankscore BETWEEN 5 AND 7
     and year BETWEEN 2004 AND 2006
-ORDER BY rankscore DESC
+ORDER BY rankscore DESC;
