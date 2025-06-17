@@ -8,5 +8,6 @@ FROM
     JOIN movies_genres ON movies_genres.movie_id = m.id
 WHERE
     rankscore is NOT NULL
+    AND m.ILIKE "q%"
 ORDER BY m.name DESC
-LIMIT 5
+LIMIT 50
