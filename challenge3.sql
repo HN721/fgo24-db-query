@@ -25,4 +25,13 @@ FROM
 GROUP BY
     d.first_name,
     d.last_name
-ORDER BY jumlah_Movie DESC
+ORDER BY jumlah_Movie DESC;
+
+-- mendapatkan tahun paling sibuk sepanjang masa
+
+SELECT year, COUNT(*) AS jumlah_movies
+FROM movies
+GROUP BY
+    year
+ORDER BY jumlah_movies DESC
+LIMIT 1;
