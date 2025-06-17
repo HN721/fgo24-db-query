@@ -35,3 +35,12 @@ GROUP BY
     year
 ORDER BY jumlah_movies DESC
 LIMIT 1;
+
+--
+SELECT m.name as Movie, string_agg(mg.genre, ' , ') as daftar_genre
+FROM movies m
+    JOIN movies_genres mg ON mg.movie_id = m.id
+WHERE
+    m.rankscore > 9
+GROUP BY
+    m.name;
