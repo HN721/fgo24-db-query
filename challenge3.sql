@@ -18,7 +18,11 @@ HAVING
     COUNT(r.role) > 5;
 -- mendapatkan director paling sibuk sepanjang masa
 
-SELECT *
+SELECT d.first_name, d.last_name, count(md.movie_id) as jumlah_Movie
 FROM
     directors d
     JOIN movies_directors md ON md.director_id = d.id
+GROUP BY
+    d.first_name,
+    d.last_name
+ORDER BY jumlah_Movie DESC
